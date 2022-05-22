@@ -22,6 +22,11 @@ public class Pad extends Component implements CRUDInterface{
     }
 
     @Override
+    public void add(){
+
+    }
+
+    @Override
     // A method that returns a String with the information of the pad.
     public String read() {
         String padInfo = title+"\n";
