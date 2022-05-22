@@ -2,6 +2,6 @@ package model;
 
 public interface CRUDInterface {
     public String read();
-    public void updateById(String id);
-    public void deleteById(String id);
+    public void updateById(String id, Component component);
+    public void deleteById(String id, Component component);
 }
