@@ -18,6 +18,12 @@ public class Page {
         this.footer = footer;
     }
 
+    public Page(String id, String header, String body) {
+        this.id = id;
+        this.header = header;
+        this.body = body;
+    }
+
     public String getId() {
         return this.id;
     }
