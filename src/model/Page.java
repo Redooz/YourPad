@@ -1,6 +1,8 @@
 package model;
 
-// A class that is used to create objects that represent a page.
+/**
+ * A class that is used to create objects that represent a page.
+ */
 public class Page extends Component{
     private String header,body,footer;
 
