@@ -39,6 +39,26 @@ public class Pad extends Component implements CRUDInterface{
     }
 
     @Override
+    public Component findById(String id){
+        int find = 0;
+        boolean found = false;
+
+        for (int i = 0; i < pages.size(); i++) {
+            if (pages.get(i).id == id) {
+                find = i;
+                found = true;
+            }
+        }
+
+        if (found) {
+            return pages.get(find);    
+        } else {
+            return null;
+        }
+        
+    }
+
+    @Override
     // Updating the page with the given id.
     public void updateById(String id, Component component) {
         if (component instanceof Page) {
