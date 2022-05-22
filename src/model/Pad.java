@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Pad extends Component implements CRUDInterface{
     private String title;
-    private ArrayList<Component> pages; 
+    private ArrayList<Page> pages;
 
     public Pad() {
         super();
@@ -15,7 +15,7 @@ public class Pad extends Component implements CRUDInterface{
         pages = new ArrayList<>();
     }
 
-    public Pad(String id, String title, ArrayList<Component> pages) {
+    public Pad(String id, String title, ArrayList<Page> pages) {
         super(id);
         this.title = title;
         this.pages = pages;
@@ -25,7 +25,7 @@ public class Pad extends Component implements CRUDInterface{
     // A method that returns a String with the information of the pad.
     public String read() {
         String padInfo = title+"\n";
-        for (Component page : pages) {
+        for (Page page : pages) {
             padInfo += page.toString()+"\n\n-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·\n";
         }
 
@@ -38,7 +38,7 @@ public class Pad extends Component implements CRUDInterface{
         if (component instanceof Page) {
             for (int i = 0; i < pages.size(); i++) {
                 if (pages.get(i).getId() == id) {
-                    pages.set(i, component);
+                    pages.set(i, (Page) component);
                 }                          
             }
         }
@@ -64,11 +64,11 @@ public class Pad extends Component implements CRUDInterface{
         this.title = title;
     }
 
-    public ArrayList<Component> getPages() {
+    public ArrayList<Page> getPages() {
         return this.pages;
     }
 
-    public void setPages(ArrayList<Component> pages) {
+    public void setPages(ArrayList<Page> pages) {
         this.pages = pages;
     }
 
