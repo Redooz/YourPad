@@ -6,13 +6,18 @@ import java.util.Stack;
  * It's a collection of pads.
  */
 public class Collection extends Component implements CRUDInterface {
+    private String title;
     private Stack<Pad> pads;
 
     public Collection() {
+        super();
+        title = "";
         pads = new Stack<>();
     }
 
-    public Collection(Stack<Pad> pads) {
+    public Collection(String id, String title, Stack<Pad> pads) {
+        super(id);
+        this.title = title;
         this.pads = pads;
     }
     
@@ -53,6 +58,14 @@ public class Collection extends Component implements CRUDInterface {
                 }                          
             }
         }
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Stack<Pad> getPads() {
