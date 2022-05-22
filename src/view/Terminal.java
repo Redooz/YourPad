@@ -51,6 +51,6 @@ public class Terminal {
     }
 
     public void print(String msg) {
-        System.out.print(msg);
+        System.out.println(msg);
     }
 }
