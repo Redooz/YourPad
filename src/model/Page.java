@@ -1,35 +1,27 @@
 package model;
 
 // A class that is used to create objects that represent a page.
-public class Page {
-    private String id,header,body,footer;
+public class Page extends Component{
+    private String header,body,footer;
 
     public Page() {
-        id = "";
+        super();
         header = "";
         body = "";
         footer = "";
     }
 
     public Page(String id, String header, String body, String footer) {
-        this.id = id;
+        super(id);
         this.header = header;
         this.body = body;
         this.footer = footer;
     }
 
     public Page(String id, String header, String body) {
-        this.id = id;
+        super(id);
         this.header = header;
         this.body = body;
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getHeader() {
@@ -59,7 +51,7 @@ public class Page {
     @Override
     public String toString() {
         return 
-            "Id: " + getId() + "\n" +
+            super.toString() +
             getHeader() + "\n" +
             getBody() + "\n" +
             getFooter() + "\n";
