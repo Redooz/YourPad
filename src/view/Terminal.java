@@ -2,6 +2,9 @@ package view;
 
 import java.util.Scanner;
 
+/**
+ * It's a wrapper for the Scanner class that allows you to input and output data to the console
+ */
 public class Terminal {
     private String title;
     private Scanner sc;
