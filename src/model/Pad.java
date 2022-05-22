@@ -22,8 +22,9 @@ public class Pad extends Component implements CRUDInterface{
     }
 
     @Override
-    public void add(){
-
+    // Adding a page to the pad.
+    public void add(Component component){
+        pages.add((Page)component);
     }
 
     @Override
