@@ -51,7 +51,7 @@ public class Page extends Component{
     }
 
     @Override
-    public String toString() {
+    public String read() {
         return 
             super.toString() +
             getHeader() + "\n" +

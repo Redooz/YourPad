@@ -1,6 +1,6 @@
 package model;
 
-public class Component{
+public abstract class Component{
     protected String id;
 
     public Component() {
@@ -24,4 +24,5 @@ public class Component{
         return "Id: "+ getId() + "\n";
     }
 
+    public abstract String read();
 }
