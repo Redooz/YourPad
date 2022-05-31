@@ -1,8 +1,12 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Stack;
+
+import javax.swing.tree.TreeNode;
 
 import model.Collection;
+import model.Pad;
 import view.Terminal;
 
 public class Controller {
@@ -44,7 +48,23 @@ public class Controller {
     }
 
     private void createCollection() {
-        //TODO
+        boolean foundSimilarId = false;
+        String title = terminal.inputString("Type a title for your collection: ");
+        String id = terminal.inputString("Type an id for your collection: ");
+        Stack<Pad> pads = new Stack<>();
+
+        for (Collection collection : collections) {
+            if (collection.getId() == id) {
+                foundSimilarId = true;
+            }
+        }
+
+        if (!foundSimilarId) {
+            collections.add(new Collection(id, title, pads));
+        } else {
+            terminal.print("Error: There's a collection with the same id. ");
+        }
+
     }
 
     private void findCollection() {
