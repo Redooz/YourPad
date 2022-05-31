@@ -3,8 +3,6 @@ package controller;
 import java.util.ArrayList;
 import java.util.Stack;
 
-import javax.swing.tree.TreeNode;
-
 import model.Collection;
 import model.Pad;
 import view.Terminal;
